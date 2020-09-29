@@ -1,0 +1,68 @@
+[
+     {
+        "codigo": 1,
+        "nome": "CÓDIGO/ESPECIFICAÇÃO DA RECEITA",
+        "rectangle": { "top": 184, "left": 130, "width": 500, "height": 18 },
+        "text": ""
+    },
+    {
+        "codigo": 2,
+        "nome": "DATA VENCIMENTO",
+        "rectangle": { "top": 184, "left": 645, "width": 215, "height": 18 },
+        "text": ""
+    },
+    {
+        "codigo": 3,
+        "nome": "PAGAMENTO ATÉ",
+        "rectangle": { "top": 184, "left": 870, "width": 215, "height": 18 },
+        "text": ""
+    },
+    {
+        "codigo": 4,
+        "nome": "NOSSO NÚMERO",
+        "rectangle": { "top": 234, "left": 870, "width": 215, "height": 18 },
+        "text": ""
+    },
+    {
+        "codigo": 5,
+        "nome": "PERÍODO REFERÊNCIA",
+        "rectangle": { "top": 276, "left": 870, "width": 215, "height": 18 },
+        "text": ""
+    },
+    {
+        "codigo": 6,
+        "nome": "VALOR PRINCIPAL",
+        "rectangle": { "top": 321, "left": 870, "width": 237, "height": 18 },
+        "text": ""
+    },
+    {
+        "codigo": 7,
+        "nome": "MULTA",
+        "rectangle": { "top": 366, "left": 870, "width": 237, "height": 18 },
+        "text": ""
+    },
+    {
+        "codigo": 8,
+        "nome": "JUROS",
+        "rectangle": { "top": 411, "left": 870, "width": 237, "height": 18 },
+        "text": ""
+    },
+    {
+        "codigo": 9,
+        "nome": "DESCONTOS",
+        "rectangle": { "top": 457, "left": 870, "width": 237, "height": 18 },
+        "text": ""
+    },
+    {
+        "codigo": 10,
+        "nome": "TOTAL A RECOLHER",
+        "rectangle": { "top": 500, "left": 870, "width": 237, "height": 17 },
+        "text": ""
+    },
+    {
+        "codigo": 13,
+        "nome": "CÓDIGO DE BARRAS",
+        "rectangle": { "top": 118, "left": 624, "width": 422, "height": 18 },
+        "text": ""    
+    }
+]

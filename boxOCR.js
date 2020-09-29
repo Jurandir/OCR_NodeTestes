@@ -1,4 +1,6 @@
-const { createWorker } = require('tesseract.js');
+const { createWorker } = require('tesseract.js')
+const modelo = require('./modelos/sefazce.json')
+
 var imagem = './img/SPO2717946.jpg'
 
 const worker = createWorker({
@@ -6,28 +8,25 @@ const worker = createWorker({
 });
 
 (async () => {
-    await worker.load();
-    await worker.loadLanguage('eng');
-    await worker.initialize('eng');
+    await worker.load()
+    await worker.loadLanguage('eng')
+    await worker.initialize('eng')
 
-    const x = { data: { text } } = await worker.recognize(imagem, {
-      rectangle: { top: 118, left: 624, width: 422, height: 18 },
-    })
+   let str
+   let len = modelo.length
 
-    const y = { data: { text } } = await worker.recognize(imagem, {
-        rectangle: { top: 184, left: 130, width: 500, height: 18 },
-      })
+   for (let i = 0; i < len; i++) {
+      const { data: { text } } = await worker.recognize(imagem, { rectangle: modelo[i].rectangle } )
+      str = text;
+      modelo[i].text = str.slice(0,-1)
+   }
 
-      const z = { data: { text } } = await worker.recognize(imagem, {
-        rectangle: { top: 184, left: 645, width: 215, height: 18 },
-      })
-      
-    console.log('13 - CÓDIGO DE BARRAS :',x.data.text);
-    console.log('01 - CÓDIGO/ESPECIFICAÇÃO DA RECEITA :',y.data.text);
-    console.log('02 - DATA VENCIMENTO :',z.data.text);
+    console.log(modelo)    
 
-    await worker.terminate();
-  })();
+    await worker.terminate()
+
+  })()
 
 
   // https://github.com/naptha/tesseract.js/blob/master/docs/api.md
+  // https://github.com/naptha/tesseract.js/blob/master/docs/examples.md
